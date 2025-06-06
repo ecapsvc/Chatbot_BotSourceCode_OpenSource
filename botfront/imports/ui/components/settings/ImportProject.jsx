@@ -23,7 +23,7 @@ const ImportProject = ({
             text: ' Import Botfront project',
             value: 'botfront',
             successText: 'Your current project has been overwritten.',
-            successHeader: 'ecapsvc import successful!',
+            successHeader: 'Botfront import successful!',
         },
         {
             key: 'rasa',

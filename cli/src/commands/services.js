@@ -84,7 +84,7 @@ export async function dockerComposeUp({ verbose = false, exclude = [], ci = fals
     const projectAbsPath = fixDir(workingDir);
     shell.cd(projectAbsPath);
     if (!isProjectDir()) {
-        const noProjectMessage = `${chalk.yellow.bold('No project found.')} ${chalk.cyan.bold('ecapsvc up')} must be executed from your project\'s directory`;
+        const noProjectMessage = `${chalk.yellow.bold('No project found.')} ${chalk.cyan.bold('Botfront up')} must be executed from your project\'s directory`;
         return console.log(boxen(noProjectMessage));
     }
     const isMajorUpdateRequired = await displayProjectUpdateMessage();
@@ -107,11 +107,11 @@ export async function dockerComposeUp({ verbose = false, exclude = [], ci = fals
         console.log(`\n\n        🎉 🎈  Botfront is ${chalk.green.bold('UP')}! 🎉 🎈\n`);
         const message = 'Useful commands:\n\n' + (
 
-            `\u2022 Run ${chalk.cyan.bold('ecapsvc logs')} to follow logs \n` +
-            `\u2022 Run ${chalk.cyan.bold('ecapsvc watch')} to watch ${chalk.yellow.bold('actions')} and ${chalk.yellow.bold('rasa')} folders (see ` +
+            `\u2022 Run ${chalk.cyan.bold('Botfront logs')} to follow logs \n` +
+            `\u2022 Run ${chalk.cyan.bold('Botfront watch')} to watch ${chalk.yellow.bold('actions')} and ${chalk.yellow.bold('rasa')} folders (see ` +
                     `${chalk.cyan.bold('https://botfront.io/docs/rasa/custom-actions')})\n` +
-            `\u2022 Run ${chalk.cyan.bold('ecapsvc down')} to stop Botfront\n`  +
-            `\u2022 Run ${chalk.cyan.bold('ecapsvc --help')} to get help with the CLI\n`
+            `\u2022 Run ${chalk.cyan.bold('Botfront down')} to stop Botfront\n`  +
+            `\u2022 Run ${chalk.cyan.bold('Botfront --help')} to get help with the CLI\n`
         );
         console.log(boxen(message) + '\n');
 
@@ -120,7 +120,7 @@ export async function dockerComposeUp({ verbose = false, exclude = [], ci = fals
         process.exit(0);
     } catch (e) {
         if (verbose) {
-            failSpinner(spinner, `${chalk.red.bold('ERROR:')} Something went wrong. Check the logs above for more information ☝️, or try inspecting the logs with ${chalk.red.cyan('ecapsvc logs')}.`);
+            failSpinner(spinner, `${chalk.red.bold('ERROR:')} Something went wrong. Check the logs above for more information ☝️, or try inspecting the logs with ${chalk.red.cyan('Botfront logs')}.`);
             console.log(e);
         } else {
             stopSpinner(spinner);
@@ -134,7 +134,7 @@ export async function dockerComposeDown({ verbose }, workingDir) {
     if (workingDir) shell.cd(workingDir)
     if (!isProjectDir()) {
         const noProject = chalk.yellow.bold('No project found in this directory.');
-        const killall = chalk.cyan.bold('ecapsvc killall');
+        const killall = chalk.cyan.bold('Botfront killall');
         const noProjectMessage = (
             `${noProject}\n\nIf you don't know where your project is running from,\n` +
             `${killall} will find and shut down any Botfront\nproject on your machine.`

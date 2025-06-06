@@ -96,7 +96,7 @@ class Settings extends React.Component {
         return (
             <>
                 <Segment>
-                    <AutoField name='settings.private.bfApiHost' label='ecapsvcAPI接口' data-cy='docker-api-host' />
+                    <AutoField name='settings.private.bfApiHost' label='BotfrontAPI接口' data-cy='docker-api-host' />
                     <AutoField name='settings.public.chitChatProjectId' label='聊天项目Id' info='ID of project containing chitchat NLU training data' />
                     <AutoField name='settings.public.docUrl' />
                     {this.renderSubmitButton()}

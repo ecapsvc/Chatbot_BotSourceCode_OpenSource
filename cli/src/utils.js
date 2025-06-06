@@ -151,7 +151,7 @@ export async function displayProjectUpdateMessage() {
     const projectVersion = getProjectVersion();
 
     if (isMinorUpdateWithVersion(projectVersion, botfrontVersion)) {
-        console.log(boxen(`Project was made with Botfront ${chalk.blueBright(projectVersion)} and the currently installed version is ${chalk.green(botfrontVersion)}\nRun ${chalk.cyan.bold('ecapsvc update')} to update your project.`));
+        console.log(boxen(`Project was made with Botfront ${chalk.blueBright(projectVersion)} and the currently installed version is ${chalk.green(botfrontVersion)}\nRun ${chalk.cyan.bold('Botfront update')} to update your project.`));
     }
     if (isMajorUpdateWithVersion(projectVersion, botfrontVersion)) {
         console.log(boxen(`Project was made with Botfront ${chalk.blueBright(projectVersion)} and the currently installed version is ${chalk.green(botfrontVersion)}, which is a major update.\nPlease follow the instructions in the migration guide: ${chalk.cyan.bold('https://botfront.io/docs/installation/migration-guide/')}.`));

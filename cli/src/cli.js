@@ -45,8 +45,8 @@ function collect(value, previous) {
 
 program
     .version(version)
-    .description('ecapsvc CLI')
-    .action(() => console.log(`\n${chalk.red.bold('ERROR:')} Unsupported command. Run ${chalk.cyan.bold('ecapsvc --help')} for more information.\n`));
+    .description('Botfront CLI')
+    .action(() => console.log(`\n${chalk.red.bold('ERROR:')} Unsupported command. Run ${chalk.cyan.bold('Botfront --help')} for more information.\n`));
 
 program
     .command('init')
@@ -177,7 +177,7 @@ async function general() {
             choices.push({ title: 'Create a new project', cmd: initCommand });
         }
         choices.push({ title: 'Browse the online documentation', cmd: openDocs});
-        choices.push({ title: 'More options (display the --help)', cmd: () => shell.exec('ecapsvc -h') });
+        choices.push({ title: 'More options (display the --help)', cmd: () => shell.exec('Botfront -h') });
         choices.push({ title: 'Exit', cmd:  () => process.exit(0) });
         console.log(boxen(`Welcome to ${chalk.green.bold('Botfront')}!\nversion: ${getBotfrontVersion()}`,  { padding: 1,  margin: 1 }));
         displayProjectUpdateMessage(); console.log('\n')
